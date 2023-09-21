@@ -10,7 +10,7 @@ import tiktoken
 PERSONA_PROMPT = "You are to act as a knowledgeable village manager recording details of municipal planning and zoning commision meetings."
 
 SECTION_PROMPT = f"{PERSONA_PROMPT} Provide a detailed recording of the discussions."
-TOPIC_PROMPT = f"{PERSONA_PROMPT} "Summarize the following meeting notes in Key Takeaways and Action Items. Key Takeaways and Action Items should not repeat each other."
+TOPIC_PROMPT = f"{PERSONA_PROMPT} Summarize the following meeting notes in Key Takeaways and Action Items. Key Takeaways and Action Items should not repeat each other."
 SUMMARY_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections by topic: 'Call To Order', 'Roll Call', ‘New Business’, ‘Old Business’, and ‘Adjournment’. Do not change the wording or order of notes."
 
 TEMPERATURE = 0.7
