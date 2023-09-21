@@ -7,13 +7,13 @@ import openai
 import tiktoken
 
 # Settings
-PERSONA_PROMPT = "You are to act as an expert project manager."
+PERSONA_PROMPT = "You are to act as a knowledgeable village manager recording details of municipal planning meetings."
 
-SECTION_PROMPT = f"{PERSONA_PROMPT} Paraphrase each thought into bullet point statements. Do not include an intro or conclusion."
-TOPIC_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections by topic. Do not change the wording or order of notes."
+SECTION_PROMPT = f"{PERSONA_PROMPT} Provide a detailed recording of the discussions regarding zoning regulations from the latest meeting."
+TOPIC_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections by topic such as 'Call To Order', 'Roll Call'‘New Business’, ‘Old Business’, and ‘Adjournment’. Do not change the wording or order of notes."
 SUMMARY_PROMPT = f"{PERSONA_PROMPT} Summarize the following meeting notes in Key Takeaways and Action Items. Key Takeaways and Action Items should not repeat each other."
 
-TEMPERATURE = 0
+TEMPERATURE = 0.7
 OVERLAP = 50
 SECTION_RESPONSE_MAX_TOKENS = 1024
 
