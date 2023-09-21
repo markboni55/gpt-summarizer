@@ -7,11 +7,11 @@ import openai
 import tiktoken
 
 # Settings
-PERSONA_PROMPT = "You are to act as a knowledgeable village manager recording details of municipal planning meetings."
+PERSONA_PROMPT = "You are to act as a knowledgeable village manager recording details of municipal planning and zoning commision meetings."
 
-SECTION_PROMPT = f"{PERSONA_PROMPT} Provide a detailed recording of the discussions regarding zoning regulations from the latest meeting."
-TOPIC_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections by topic such as 'Call To Order', 'Roll Call'‘New Business’, ‘Old Business’, and ‘Adjournment’. Do not change the wording or order of notes."
-SUMMARY_PROMPT = f"{PERSONA_PROMPT} Summarize the following meeting notes in Key Takeaways and Action Items. Key Takeaways and Action Items should not repeat each other."
+SECTION_PROMPT = f"{PERSONA_PROMPT} Provide a detailed recording of the discussions."
+TOPIC_PROMPT = f"{PERSONA_PROMPT} "Summarize the following meeting notes in Key Takeaways and Action Items. Key Takeaways and Action Items should not repeat each other."
+SUMMARY_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections by topic: 'Call To Order', 'Roll Call', ‘New Business’, ‘Old Business’, and ‘Adjournment’. Do not change the wording or order of notes."
 
 TEMPERATURE = 0.7
 OVERLAP = 50
@@ -28,7 +28,7 @@ openai.organization = ORG_ID
 openai.api_key = API_KEY
 
 # Only compatable with chat models like gpt-3.5-turbo
-MODEL = "gpt-3.5-turbo"
+MODEL = "gpt-4"
 SYSTEM_PROMPT = "You are a helpful assistant."
 
 # Get the encoding for the GPT-2 model for tokenizing text
