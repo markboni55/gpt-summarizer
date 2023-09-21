@@ -15,7 +15,7 @@ SUMMARY_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections. 
 
 TEMPERATURE = 0.7
 OVERLAP = 50
-SECTION_RESPONSE_MAX_TOKENS = 3024
+SECTION_RESPONSE_MAX_TOKENS = 1024
 
 # Set up OpenAI API credentials and model name
 # You must set these as environmental variables on your OS or change 'None' below (less secure)
