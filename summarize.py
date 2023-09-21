@@ -7,15 +7,15 @@ import openai
 import tiktoken
 
 # Settings
-PERSONA_PROMPT = "You are to act as a knowledgeable village manager recording details of municipal planning and zoning commision meetings."
+PERSONA_PROMPT = "You are to act as a knowledgeable village manager recording detailed summary of municipal planning and zoning commision meetings."
 
-SECTION_PROMPT = f"{PERSONA_PROMPT} Please provide a detailed summary including the following sections [CALL TO ORDER: ROLL CALL: APPROVAL OF MINUTES PUBLIC COMMENT:  NEW BUSINESS: OLD BUSINESS: ADJOURNMENT:]"
-TOPIC_PROMPT = f"{PERSONA_PROMPT} Summarize the following meeting notes in Key Takeaways and Action Items. Key Takeaways and Action Items should not repeat each other."
+SECTION_PROMPT = f"{PERSONA_PROMPT} Please provide the following sections [CALL TO ORDER: ROLL CALL: APPROVAL OF MINUTES PUBLIC COMMENT:  NEW BUSINESS: OLD BUSINESS: ADJOURNMENT:]"
+TOPIC_PROMPT = f"{PERSONA_PROMPT} Summarize the following meeting detailed notes in Key Takeaways and Action Items. Key Takeaways and Action Items should not repeat each other."
 SUMMARY_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections. Do not change the wording or order of notes."
 
 TEMPERATURE = 0.7
 OVERLAP = 50
-SECTION_RESPONSE_MAX_TOKENS = 1024
+SECTION_RESPONSE_MAX_TOKENS = 4024
 
 # Set up OpenAI API credentials and model name
 # You must set these as environmental variables on your OS or change 'None' below (less secure)
