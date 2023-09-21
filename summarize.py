@@ -9,7 +9,7 @@ import tiktoken
 # Settings
 PERSONA_PROMPT = "You are to act as a knowledgeable village manager recording details of municipal planning and zoning commision meetings."
 
-SECTION_PROMPT = f"{PERSONA_PROMPT} Please provide a detailed summary including the following sections "CALL TO ORDER: ROLL CALL: APPROVAL OF MINUTES PUBLIC COMMENT:  NEW BUSINESS: OLD BUSINESS: ADJOURNMENT:"
+SECTION_PROMPT = f"{PERSONA_PROMPT} Please provide a detailed summary including the following sections [CALL TO ORDER: ROLL CALL: APPROVAL OF MINUTES PUBLIC COMMENT:  NEW BUSINESS: OLD BUSINESS: ADJOURNMENT:]"
 TOPIC_PROMPT = f"{PERSONA_PROMPT} Summarize the following meeting notes in Key Takeaways and Action Items. Key Takeaways and Action Items should not repeat each other."
 SUMMARY_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections. Do not change the wording or order of notes."
 
