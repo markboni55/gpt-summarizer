@@ -7,11 +7,11 @@ import openai
 import tiktoken
 
 # Settings
-PERSONA_PROMPT = "You are to act as a knowledgeable village manager recording detailed summary of municipal planning and zoning commision meetings."
+PERSONA_PROMPT = "You are to act as a knowledgeable recording clerk recording detailed notes documenting the discussions, decisions, and actions taken during the meeting."
 
-SECTION_PROMPT = f"{PERSONA_PROMPT} Please provide the following sections [CALL TO ORDER: ROLL CALL: APPROVAL OF MINUTES PUBLIC COMMENT:  NEW BUSINESS: OLD BUSINESS: ADJOURNMENT:]"
-TOPIC_PROMPT = f"{PERSONA_PROMPT} Summarize the following meeting detailed notes in Key Takeaways and Action Items. Key Takeaways and Action Items should not repeat each other."
-SUMMARY_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections. Do not change the wording or order of notes."
+SECTION_PROMPT = f"{PERSONA_PROMPT} Paraphrase each thought into bullet point statements. Do not include an intro or conclusion."
+TOPIC_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections by topic. Do not change the wording or order of notes."
+SUMMARY_PROMPT = f"{PERSONA_PROMPT} Separate the following notes into sections [CALL TO ORDER: ROLL CALL: APPROVAL OF MINUTES PUBLIC COMMENT:  NEW BUSINESS: OLD BUSINESS: ADJOURNMENT:]. Do not change the wording or order of notes."
 
 TEMPERATURE = 0.7
 OVERLAP = 50
